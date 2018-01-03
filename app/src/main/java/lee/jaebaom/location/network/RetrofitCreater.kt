@@ -1,7 +1,8 @@
-package lee.jaebaom.location
+package lee.jaebaom.location.network
 
 import android.util.Log
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import lee.jaebaom.location.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
