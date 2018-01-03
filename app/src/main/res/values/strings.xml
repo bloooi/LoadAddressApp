@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">location</string>
+    <string name="naver_map_api_client_id">Y6PftYCwC2XxfnK604Ft</string>
+    <string name="naver_map_api_client_secret">nDHIW6iWPU</string>
+</resources>
