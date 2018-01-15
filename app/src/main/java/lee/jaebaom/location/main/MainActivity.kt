@@ -22,13 +22,16 @@ class MainActivity : AppCompatActivity() {
     private var loading = false
     private var totalPageCount: Int = 0
     private var pageNumber = 1
-    val adapter = MainAdapter()
+    val adapter = MainAdapter(this)
     private val mainPresenter = MainPresenter(adapter)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        keyword.setOnKeyListener { view, i, keyEvent ->
+        toolbar.title = "location"
+        setSupportActionBar(toolbar)
+
+        keyword.setOnKeyListener { view, i, keyEvent -> //EditText를 이용할때 엔터키를 눌러 검색한다.
             val imm : InputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
             if ((keyEvent.action == KeyEvent.ACTION_DOWN) && (i == KeyEvent.KEYCODE_ENTER)){
                 initialize()

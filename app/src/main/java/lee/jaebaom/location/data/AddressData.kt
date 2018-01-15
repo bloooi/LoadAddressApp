@@ -1,5 +1,8 @@
 package lee.jaebaom.location.data
 
+import android.os.Parcel
+import android.os.Parcelable
+
 /**
  * Created by leejaebeom on 2017. 12. 22..
  * 변수명들이 참 개떡같이 지어져 있지만 이거 내가 지은거 아님
@@ -30,7 +33,75 @@ data class AddressData (
         val lnbrMnnm: String,   //지번본번(번지)
         val lnbrSlno: String,   //지번부번(호)
         val emdNo: String   //읍면동일련번호
-)
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString()) {
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(roadAddr)
+        parcel.writeString(roadAddrPart1)
+        parcel.writeString(roadAddrPart2)
+        parcel.writeString(jibunAddr)
+        parcel.writeString(engAddr)
+        parcel.writeString(zipNo)
+        parcel.writeString(admCd)
+        parcel.writeString(rnMgtSn)
+        parcel.writeString(bdMgtSn)
+        parcel.writeString(detBdNmList)
+        parcel.writeString(bdNm)
+        parcel.writeString(bdKdcd)
+        parcel.writeString(siNm)
+        parcel.writeString(sggNm)
+        parcel.writeString(emdNm)
+        parcel.writeString(liNm)
+        parcel.writeString(rn)
+        parcel.writeString(udrtYn)
+        parcel.writeString(buldMnnm)
+        parcel.writeString(buldSlno)
+        parcel.writeString(mtYn)
+        parcel.writeString(lnbrMnnm)
+        parcel.writeString(lnbrSlno)
+        parcel.writeString(emdNo)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<AddressData> {
+        override fun createFromParcel(parcel: Parcel): AddressData {
+            return AddressData(parcel)
+        }
+
+        override fun newArray(size: Int): Array<AddressData?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
 
 
 

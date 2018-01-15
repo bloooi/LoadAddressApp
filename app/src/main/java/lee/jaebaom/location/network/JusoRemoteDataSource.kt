@@ -1,7 +1,6 @@
-package lee.jaebaom.location.data
+package lee.jaebaom.location.network
 
-import lee.jaebaom.location.network.createRetrofit
-import lee.jaebaom.location.network.JusoRemote
+import lee.jaebaom.location.data.JusoDatas
 import retrofit2.Call
 
 /**

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">location</string>
-    <string name="naver_map_api_client_id">Y6PftYCwC2XxfnK604Ft</string>
     <string name="naver_map_api_client_secret">nDHIW6iWPU</string>
+    <string name="temp_string_long">이것은 임시 텍스트 입니다 출시전 반드시 수정해 주셔야 합니다</string>
+    <string name="temp_string_short">이것은 임시 텍스트 입니다 </string>
+    <string name="temp_int">12345</string>
+    <string name="temp_geo">37.123248, 128.298148</string>
 </resources>
